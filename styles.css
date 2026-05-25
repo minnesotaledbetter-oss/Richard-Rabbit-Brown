@@ -1,12 +1,12 @@
 :root {
-  --paper: #fcfaf5;
+  --paper: #f7f4ee;
   --ink: #1e1e1c;
   --muted: #6e6a63;
   --link: #2e4057;
   --line: rgba(30, 30, 28, 0.22);
   --accent: #781f1b;
   --accent-soft: #eadfce;
-  --panel: #f8f4eb;
+  --panel: #f1ebde;
   --shadow: rgba(30, 30, 28, 0.08);
 }
 
@@ -16,7 +16,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
 }
 
 body {
@@ -77,17 +76,8 @@ a {
   padding: 10px 0 12px;
   border-top: 2px solid var(--accent);
   border-bottom: 1px solid var(--line);
-  background: var(--panel);
-  box-shadow: 0 8px 18px rgba(248, 244, 235, 0.98);
+  background: linear-gradient(rgba(247, 244, 238, 0.96), rgba(247, 244, 238, 0.96));
   scrollbar-width: thin;
-}
-
-.chapter,
-#storymap,
-#works-cited,
-#additional-sources,
-#end-card {
-  scroll-margin-top: 96px;
 }
 
 .menu-bar a {
@@ -106,9 +96,9 @@ a {
 }
 
 .menu-bar a:hover {
-  color: #1e1e1c;
-  border-color: transparent;
-  background: transparent;
+  color: var(--accent);
+  border-color: rgba(120, 31, 27, 0.22);
+  background: var(--accent-soft);
 }
 
 .menu-bar::-webkit-scrollbar {
@@ -215,120 +205,13 @@ h2 {
 
 .chapter h2 {
   margin: 0 0 16px;
-  font-family: "Inter", "Arial Narrow", "Helvetica Neue", sans-serif;
-  font-size: clamp(1.7rem, 3.2vw, 2.2rem);
-  font-weight: 700;
-  line-height: 1.02;
-  letter-spacing: 0.115em;
+  font-size: clamp(1.85rem, 3.5vw, 2.45rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--accent);
   border-top: 1px solid var(--line);
   padding-top: 12px;
-  text-wrap: balance;
-}
-
-.liner-note-chapter .chapter-linerhead,
-.boxed-chapter .chapter-linerhead {
-  display: grid;
-  grid-template-columns: minmax(84px, 0.85fr) minmax(0, 2.4fr);
-  gap: 18px;
-  align-items: stretch;
-  margin: 0 0 1.1rem;
-  padding: 6px;
-  border: 3px double rgba(30, 30, 28, 0.78);
-  background: rgba(247, 244, 238, 0.96);
-}
-
-.liner-note-chapter .chapter-linerhead-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 66px;
-  color: var(--accent);
-  font-family: "Inter", "Arial Narrow", "Helvetica Neue", sans-serif;
-  font-size: clamp(2.65rem, 5vw, 3.8rem);
-  font-weight: 950;
-  -webkit-text-stroke: 0.02em currentColor;
-  line-height: 0.82;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
-  text-rendering: geometricPrecision;
-}
-
-.liner-note-chapter .chapter-linerhead-titlebox,
-.boxed-chapter .chapter-linerhead-titlebox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  padding: 13px 20px 14px;
-  background: #161513;
-  color: #f4efe7;
-}
-
-.liner-note-chapter .chapter-linerhead h2,
-.boxed-chapter .chapter-linerhead h2 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  color: #f4efe7;
-  font-family: "Inter", "Arial Narrow", "Helvetica Neue", sans-serif;
-  font-size: clamp(1.75rem, 3.9vw, 2.45rem);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-wrap: balance;
-}
-
-.boxed-chapter .chapter-linerhead {
-  display: block;
-}
-
-.boxed-chapter .chapter-linerhead-titlebox {
-  padding: 13px 20px 14px;
-}
-
-.boxed-chapter .chapter-linerhead h2 {
-  font-size: clamp(1.6rem, 3.3vw, 2.1rem);
-}
-
-#nonplace .chapter-linerhead,
-#great-northern .chapter-linerhead,
-#marriage .chapter-linerhead,
-#titanic .chapter-linerhead,
-#victor .chapter-linerhead,
-#mystery .chapter-linerhead,
-#blind-willie .chapter-linerhead,
-#black-friday .chapter-linerhead {
-  grid-template-columns: minmax(74px, 0.72fr) minmax(0, 2.58fr);
-}
-
-#bobby-dunbar .chapter-linerhead,
-#widow .chapter-linerhead,
-#the-city .chapter-linerhead,
-#last-thoughts .chapter-linerhead {
-  grid-template-columns: minmax(66px, 0.62fr) minmax(0, 2.7fr);
-}
-
-#titanic .chapter-linerhead-number,
-#widow .chapter-linerhead-number,
-#zulu .chapter-linerhead-number,
-#coal-fire .chapter-linerhead-number,
-#not-dark-yet .chapter-linerhead-number,
-#victor .chapter-linerhead-number,
-#james-alley .chapter-linerhead-number,
-#mystery .chapter-linerhead-number,
-#blind-willie .chapter-linerhead-number,
-#wreckage .chapter-linerhead-number,
-#black-friday .chapter-linerhead-number,
-#aftermath .chapter-linerhead-number,
-#the-city .chapter-linerhead-number,
-#last-thoughts .chapter-linerhead-number,
-#afterwords .chapter-linerhead-number {
-  letter-spacing: 0.12em;
 }
 
 .chapter p {
@@ -346,18 +229,15 @@ h2 {
 
 .dedication p {
   margin: 0;
-  font-family: "Inter", "Arial Narrow", "Helvetica Neue", sans-serif;
-  font-size: clamp(0.88rem, 1.3vw, 0.96rem);
-  font-style: italic;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  line-height: 1.1;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
   display: inline-block;
   padding: 0;
   border: 0;
   background: transparent;
   color: var(--accent);
-  text-transform: uppercase;
 }
 
 .wrap-image {
@@ -380,10 +260,8 @@ h2 {
 }
 
 .darktown-clippings {
-  width: 480px;
-  max-width: 58%;
   background: transparent;
-  margin-top: -0.15rem;
+  margin-top: -0.75rem;
 }
 
 .darktown-ledger-image {
@@ -444,12 +322,12 @@ h2 {
   width: min(270px, 33%);
   height: auto;
   max-width: none;
-  margin-top: 1.4rem;
+  margin-top: -1.15rem;
 }
 
 .black-friday-certificate {
-  width: min(300px, 40%);
-  margin-top: -0.1rem;
+  width: min(350px, 46%);
+  margin-top: 0.2rem;
 }
 
 .aftermath-ledger-image {
@@ -501,7 +379,6 @@ h2 {
   border: 0;
   background: transparent;
   box-shadow: none;
-  text-align: center;
 }
 
 .storymap-card p {
@@ -580,30 +457,12 @@ h2 {
   text-align: center;
 }
 
-.end-card-wrap {
-  position: relative;
-  display: inline-block;
-  width: min(575px, 50%);
-}
-
 .end-card-image {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: auto;
   border: 3px double var(--accent);
   background: rgba(247, 244, 238, 0.96);
-}
-
-.end-card-email-link {
-  position: absolute;
-  left: 27.2%;
-  top: 73.8%;
-  width: 44.8%;
-  height: 11.5%;
-  overflow: hidden;
-  text-indent: -9999px;
-  white-space: nowrap;
-  z-index: 2;
 }
 
 .chapter#the-end p {
@@ -628,36 +487,6 @@ h2 {
   font-size: 0.79rem;
   line-height: 1.72;
   color: var(--muted);
-}
-
-.reader-comments {
-  margin-top: 60px;
-  padding-top: 8px;
-}
-
-.reader-comments-intro {
-  margin: 0 0 1rem;
-  color: var(--muted);
-}
-
-.reader-comments-shell {
-  border-top: 1px solid rgba(30, 30, 28, 0.18);
-  border-bottom: 1px solid rgba(30, 30, 28, 0.18);
-  padding: 1rem 0;
-}
-
-.cusdis-placeholder {
-  min-height: 140px;
-  padding: 1rem 1.05rem;
-  border: 1px solid rgba(30, 30, 28, 0.16);
-  background: rgba(255, 252, 247, 0.74);
-}
-
-.reader-comments-note {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-style: italic;
 }
 
 .single-image-popup {
@@ -732,38 +561,34 @@ h2 {
   .chapter-sidebar-nav {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 7px;
   }
 
   .chapter-sidebar-nav a {
     display: block;
-    padding: 5px 8px 4px;
-    border: 1px solid transparent;
-    color: var(--accent);
+    padding-left: 0.55rem;
+    border-left: 2px solid transparent;
+    color: rgba(120, 31, 27, 0.78);
     text-decoration: none;
     font-family: "Inter", "Arial Narrow", "Helvetica Neue", sans-serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    line-height: 1.1;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
     text-transform: uppercase;
-    transition: color 120ms ease, transform 120ms ease, border-color 120ms ease, background 120ms ease;
+    transition: color 120ms ease, transform 120ms ease, border-color 120ms ease, font-weight 120ms ease;
   }
 
   .chapter-sidebar-nav a:hover,
   .chapter-sidebar-nav a.is-active {
-    color: #1e1e1c;
-    border-color: transparent;
-    background: transparent;
+    color: #4b120f;
+    border-left-color: var(--accent);
+    font-weight: 700;
     transform: translateX(2px);
   }
 }
 
 @media (max-width: 720px) {
-  html {
-    scroll-padding-top: 84px;
-  }
-
   .page {
     width: min(100% - 20px, 840px);
     padding-top: 28px;
@@ -777,14 +602,6 @@ h2 {
     top: 8px;
   }
 
-  .chapter,
-  #storymap,
-  #works-cited,
-  #additional-sources,
-  #end-card {
-    scroll-margin-top: 84px;
-  }
-
   .wrap-image {
     float: none;
     display: block;
@@ -792,46 +609,4 @@ h2 {
     margin: 0 auto 1rem;
   }
 
-  .liner-note-chapter .chapter-linerhead {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 8px;
-  }
-
-  .liner-note-chapter .chapter-linerhead-number {
-    min-height: 0;
-    justify-content: flex-start;
-    padding-left: 8px;
-    font-size: clamp(4.2rem, 16vw, 5.5rem);
-  }
-
-  .liner-note-chapter .chapter-linerhead-titlebox {
-    padding: 16px 18px 18px;
-  }
-
-  .boxed-chapter .chapter-linerhead-titlebox {
-    padding: 14px 16px 15px;
-  }
-
-}
-
-@media (max-width: 1080px) {
-  html {
-    scroll-padding-top: 24px;
-  }
-
-  .menu-bar {
-    position: relative;
-    top: auto;
-    z-index: 1;
-    box-shadow: none;
-  }
-
-  .chapter,
-  #storymap,
-  #works-cited,
-  #additional-sources,
-  #end-card {
-    scroll-margin-top: 24px;
-  }
 }
