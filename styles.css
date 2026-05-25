@@ -583,7 +583,7 @@ h2 {
 .end-card-wrap {
   position: relative;
   display: inline-block;
-  width: min(575px, 50%);
+  width: min(800px, 80%);
 }
 
 .end-card-image {
@@ -596,10 +596,10 @@ h2 {
 
 .end-card-email-link {
   position: absolute;
-  left: 27.2%;
-  top: 73.8%;
-  width: 44.8%;
-  height: 11.5%;
+  left: 25%;
+  top: 75%;
+  width: 50%;
+  height: 12%;
   overflow: hidden;
   text-indent: -9999px;
   white-space: nowrap;
